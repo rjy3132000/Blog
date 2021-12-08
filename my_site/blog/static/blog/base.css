@@ -1,0 +1,20 @@
+#footer{
+    text-align: center;
+    width: 100%;
+    padding: 30px 0;
+    border-radius: 200px;
+}
+#footer h3{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa{
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.icons .fa-heartbeat{
+    color: #f44336;
+}

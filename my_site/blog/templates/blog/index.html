@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} My Site Page {% endblock title %}
+{% block css_File %} 
+<link rel="stylesheet" href="{% static "blog/index.css" %}"/>
+<link rel="stylesheet" href="{% static "blog/post.css" %}"/>
+{% endblock css_File %}
+
+{% block content %}
+
+<section id="welcome">
+    <header>
+        <img src="{% static 'blog/images/2.jpg' %}" alt="Rajesh The Author">
+        <h2>Rajesh <br> Blog's</h2>
+        <p>Hi, I am Rajesh Yadav, and I Love To Blog and Learn a New Technologies!</p>
+    </header>
+</section>
+  
+<section id="latest_post">
+    <h2 class="latest_post_Head">My Latest Thoughts</h2>
+    <ul>
+    {% for post in posts %} 
+        {% include "blog/includes/post.html" %}
+    {% endfor %}
+    </ul>
+</section>
+
+
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}  {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "blog/base.css" %}"/>
+    <script src="https://kit.fontawesome.com/44a8029e75.js" crossorigin="anonymous"></script>
+    {% block css_File %}     {% endblock css_File %}
+
+</head>  
+<body>
+    <header class="navbars">
+        <h1><a href="{% url 'starting-page' %}">Welcome To My Blogs</a></h1> 
+        <nav>
+            <a href="{% url 'posts-page' %}">All Posts</a>
+            <a href="{% url 'read-later' %}">Stored Posts</a>
+        </nav>
+    </header>
+    {% block content %}
+    
+    {% endblock content %}
+
+    <footer id="footer">
+        <h3> ABOUT US </h3>
+        <p>I Love Programming And Traning On Various Technologies and Passionate About Various <br> Technologies and Like To Explore!</p>
+        <p class="para">My Goal Is To Keep Growing Programming</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-google-plus"></i>
+            <p>Made With <i class="fas fa-heartbeat"></i> Rajesh Yadav</p>
+        </div>
+    </footer>
+</body>
+</html>
